@@ -1,15 +1,16 @@
 {
-  "name": "{{ rocAppName }}",
+  "name": "{{ name }}",
   "private": true,
-  "license": "MIT",
+  "license": "{{ license }}",
   "scripts": {
+    "start": "rid",
     "rid": "rid",
     "build": "rid build",
-    "lint": "rid lint:alias",
+    "lint": "rid lint",
     "link": "rid link",
     "test": "npm run lint"
   },
   "devDependencies": {
-    "@rocjs/roc-internal-dev": "^1.0.0"
+    "@rocjs/roc-package-internal-dev": "^2.0.2"
   }
 }

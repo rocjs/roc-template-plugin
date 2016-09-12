@@ -1,0 +1,46 @@
+{
+    "prompts": {
+        "name": {
+            "type": "string",
+            "required": true,
+            "message": "Project name (roc-plugin-X)"
+        },
+        "description": {
+            "type": "string",
+            "required": false,
+            "message": "Project description",
+            "default": "A Roc plugin"
+        },
+        "author": {
+            "type": "string",
+            "message": "Author"
+        },
+        "git": {
+            "type": "string",
+            "message": "Git repository"
+        },
+        "useTravis": {
+            "type": "confirm",
+            "message": "Use Travis?"
+        },
+        "travisUrl": {
+            "when": "useTravis",
+            "type": "string",
+            "message": "Travis URL"
+        },
+        "license": {
+            "type": "list",
+            "choices": [{
+                "name": "MIT"
+            }, {
+                "name": "UNLICENSED"
+            }]
+        }
+    },
+    "filters": {
+        ".travis.yml": "useTravis",
+        "LICENSE": "license === 'MIT'",
+        "**/LICENSE": "license === 'MIT'"
+    },
+    "completionMessage": "To get started:\n\n{{#unless inPlace}}  cd {{destDirName}}\n{{/unless}}  npm install\n  npm run link"
+}

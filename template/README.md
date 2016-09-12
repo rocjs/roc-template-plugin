@@ -1,5 +1,7 @@
-# {{ rocAppName }}
-[![Build Status](https://travis-ci.org/{{ rocTravisUrl }}.svg?branch=master)](https://travis-ci.org/{{ rocTravisUrl }})
+# {{ name }} {{#useTravis}}[![Build Status](https://travis-ci.org/{{ travisUrl }}.svg?branch=master)](https://travis-ci.org/{{ travisUrl }}){{/useTravis}}
 
-__{{ rocAppDesc }}__  
-- [{{ rocAppName }}](/packages/{{ rocAppName }})
+__{{ description }}__  
+- [{{ name }}](/extensions/{{ name }})
+
+---
+To be used together with [Roc](https://github.com/rocjs/roc).
