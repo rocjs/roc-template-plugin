@@ -11,6 +11,6 @@
     "test": "npm run lint"
   },
   "devDependencies": {
-    "@rocjs/roc-package-internal-dev": "^2.0.2"
+    "@rocjs/roc-internal-dev": "^2.0.2"
   }
 }
